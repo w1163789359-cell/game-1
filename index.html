@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)https://quda.lessx.xyz/ -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小学生趣味答题</title>
+    <!-- Tailwind CSS -->
+    <script src="./小学生趣味答题-原始_files/saved_resource"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- 自定义 Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF6B98',
+                        secondary: '#5BCEFA',
+                        accent: '#FFD166',
+                        success: '#06D6A0',
+                        danger: '#EF476F',
+                        info: '#118AB2',
+                        background: '#F9F7F3',
+                    },
+                    fontFamily: {
+                        sans: ['Arial Rounded MT Bold', 'Varela Round', 'sans-serif'],
+                    },
+                    animation: {
+                        'bounce-slow': 'bounce 2s infinite',
+                        'wiggle': 'wiggle 1s ease-in-out infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        wiggle: {
+                            '0%, 100%': { transform: 'rotate(-3deg)' },
+                            '50%': { transform: 'rotate(3deg)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            }
+            .card-shadow {
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            }
+            .btn-pop {
+                transition: all 0.2s ease;
+            }
+            .btn-pop:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            .btn-pop:active {
+                transform: translateY(1px);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            .option-hover:hover {
+                transform: scale(1.02);
+                background-color: rgba(91, 206, 250, 0.1);
+            }
+            .confetti {
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                background-color: #f00;
+                border-radius: 50%;
+                animation: fall 3s linear forwards;
+            }
+            @keyframes fall {
+                0% {
+                    transform: translateY(-100vh) rotate(0deg);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(100vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Arial Rounded MT Bold, Varela Round, sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width: 640px){.container{max-width:640px}}@media (min-width: 768px){.container{max-width:768px}}@media (min-width: 1024px){.container{max-width:1024px}}@media (min-width: 1280px){.container{max-width:1280px}}@media (min-width: 1536px){.container{max-width:1536px}}.fixed{position:fixed}.relative{position:relative}.inset-0{inset:0px}.z-0{z-index:0}.z-10{z-index:10}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-2{margin-top:0.5rem}.flex{display:flex}.hidden{display:none}.h-10{height:2.5rem}.h-12{height:3rem}.h-2\.5{height:0.625rem}.h-48{height:12rem}.h-full{height:100%}.min-h-screen{min-height:100vh}.w-10{width:2.5rem}.w-12{width:3rem}.w-48{width:12rem}.w-full{width:100%}.max-w-4xl{max-width:56rem}@keyframes float{0%, 100%{transform:translateY(0)}50%{transform:translateY(-10px)}}.animate-float{animation:float 3s ease-in-out infinite}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-xl{border-radius:0.75rem}.bg-background{--tw-bg-opacity:1;background-color:rgb(249 247 243 / var(--tw-bg-opacity, 1))}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 231 235 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-primary{--tw-bg-opacity:1;background-color:rgb(255 107 152 / var(--tw-bg-opacity, 1))}.bg-secondary{--tw-bg-opacity:1;background-color:rgb(91 206 250 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.object-cover{object-fit:cover}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-8{padding-top:2rem;padding-bottom:2rem}.text-center{text-align:center}.font-sans{font-family:Arial Rounded MT Bold, Varela Round, sans-serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-primary{--tw-text-opacity:1;color:rgb(255 107 152 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.opacity-10{opacity:0.1}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            }.card-shadow {
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            }.btn-pop {
+                transition: all 0.2s ease;
+            }.btn-pop:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }.btn-pop:active {
+                transform: translateY(1px);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }@keyframes fall {
+                0% {
+                    transform: translateY(-100vh) rotate(0deg);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(100vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }.hover\:bg-gray-300:hover{--tw-bg-opacity:1;background-color:rgb(209 213 219 / var(--tw-bg-opacity, 1))}.hover\:bg-opacity-90:hover{--tw-bg-opacity:0.9}.disabled\:cursor-not-allowed:disabled{cursor:not-allowed}.disabled\:opacity-50:disabled{opacity:0.5}
+    </style></head>
+<body class="bg-background min-h-screen font-sans" cz-shortcut-listen="true">
+    <!-- 背景图 -->
+    <div class="fixed inset-0 z-0 opacity-10">
+        <img src="https://free.picui.cn/free/2026/04/13/69dc3e7257411.jpg" alt="背景" class="w-full h-full object-cover">
+    </div>
+
+    <div class="relative z-10 container mx-auto px-4 py-8 max-w-4xl">
+        <!-- 顶部标题 -->
+        <header class="text-center mb-8">
+            <div class="flex justify-center items-center gap-3">
+                <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                    <i class="fa fa-star text-white text-xl"></i>
+                </div>
+                <h1 class="text-4xl font-bold text-primary text-shadow">小学生趣味答题</h1>
+            </div>
+            <p class="text-gray-600 mt-2">挑战你的知识，享受学习的乐趣！</p>
+        </header>
+
+        <!-- 主内容区 -->
+        <main>
+            <!-- 开始界面 -->
+            <div id="start-screen" class="bg-white rounded-3xl p-8 card-shadow text-center">
+                <div class="flex justify-center mb-6">
+                    <img src="https://free.picui.cn/free/2026/04/13/69dc3e7257411.jpg" alt="学习" class="w-48 h-48 object-cover rounded-2xl animate-float">
+                </div>
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">准备好开始挑战了吗？</h2>
+                <p class="text-gray-600 mb-6">每次将从题库中随机抽取10道题目，包括选择题和判断题</p>
+                <div class="flex flex-col gap-4">
+                    <button id="start-btn" class="bg-primary hover:bg-opacity-90 text-white py-3 px-8 rounded-full text-lg font-bold btn-pop">
+                        开始答题
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- 答题界面 -->
+            <div id="quiz-screen" class="hidden bg-white rounded-3xl p-6 card-shadow">
+                <!-- 进度条 -->
+                <div class="mb-6">
+                    <div class="flex justify-between text-sm text-gray-600 mb-1">
+                        <span>题目进度</span>
+                        <span id="progress-text">1/10</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div id="progress-bar" class="bg-primary h-2.5 rounded-full transition-all duration-300" style="width: 10%"></div>
+                    </div>
+                </div>
+
+                <!-- 题目区域 -->
+                <div id="question-container" class="mb-6">
+                    <h3 id="question-text" class="text-xl font-bold text-gray-800 mb-4">问题加载中...</h3>
+                    
+                    <!-- 选项区域 -->
+                    <div id="options-container" class="space-y-3">
+                        <!-- 选项将通过JS动态生成 -->
+                    </div>
+                </div>
+
+                <!-- 反馈区域 -->
+                <div id="feedback-container" class="hidden mb-6 p-4 rounded-xl">
+                    <div class="flex items-center gap-3">
+                        <div id="feedback-icon" class="w-10 h-10 rounded-full flex items-center justify-center">
+                            <!-- 图标将通过JS动态生成 -->
+                        </div>
+                        <p id="feedback-text" class="font-medium">反馈信息将显示在这里</p>
+                    </div>
+                </div>
+
+                <!-- 操作按钮 -->
+                <div class="flex justify-between">
+                    <button id="prev-btn" class="bg-gray-200 hover:bg-gray-300 text-gray-700 py-2 px-6 rounded-full font-bold btn-pop disabled:opacity-50 disabled:cursor-not-allowed">
+                        上一题
+                    </button>
+                    <button id="next-btn" class="bg-primary hover:bg-opacity-90 text-white py-2 px-6 rounded-full font-bold btn-pop">
+                        下一题
+                    </button>
+                </div>
+            </div>
+
+            <!-- 结果界面 -->
+            <div id="result-screen" class="hidden bg-white rounded-3xl p-8 card-shadow text-center">
+                <div id="result-animation" class="mb-6 flex justify-center">
+                    <!-- 动画将通过JS动态生成 -->
+                </div>
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">答题完成！</h2>
+                <p class="text-gray-600 mb-6">你在本次答题中的表现如下：</p>
+                
+                <div class="bg-gray-50 rounded-2xl p-6 mb-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-gray-600">得分</span>
+                        <span id="score-text" class="text-3xl font-bold text-primary">0/10</span>
+                    </div>
+                    <div class="flex justify-between text-gray-600">
+                        <span>正确题数: <span id="correct-count">0</span></span>
+                        <span>错误题数: <span id="wrong-count">0</span></span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <button id="retry-btn" class="bg-primary hover:bg-opacity-90 text-white py-3 px-8 rounded-full text-lg font-bold btn-pop">
+                        再答一次
+                    </button>
+                    <button id="back-to-start-btn" class="bg-secondary hover:bg-opacity-90 text-white py-3 px-8 rounded-full text-lg font-bold btn-pop">
+                        返回首页
+                    </button>
+                </div>
+            </div>
+
+
+        </main>
+    </div>
+
+    <script>
+        // 默认题库
+        const defaultQuestions = [
+ // 理财小知识题库 - 共100题（单选题60题，判断题40题）
+   // 理财小知识题库 100题（60道单选题 +40道判断题）
+
+    {
+        type: 'multiple',
+        question: '以下哪种行为是合理的储蓄习惯？',
+        options: ['把所有的零花钱都花光', '把一部分零花钱存起来，留着以后用', '向同学借钱买东西'],
+        answer: '把一部分零花钱存起来，留着以后用',
+        correctHint: '答对了！学会“先存后花”是理财的第一步，哪怕只存10%，也能积少成多。',
+        wrongHint: '不对哦，学会“先存后花”是理财的第一步，哪怕只存10%，也能积少成多。'
+    },
+    {
+        type: 'multiple',
+        question: '如果你看到一款很喜欢的玩具，但价格很贵，你应该怎么做？',
+        options: ['马上找爸妈要钱买', '先冷静想一想，是否真的需要，或者等打折时再考虑', '偷偷从家里拿钱去买'],
+        answer: '先冷静想一想，是否真的需要，或者等打折时再考虑',
+        correctHint: '答对了！学会“延迟满足”，给自己冷静期，能避免冲动消费。',
+        wrongHint: '不对哦，学会“延迟满足”，给自己冷静期，能避免冲动消费。'
+    },
+    {
+        type: 'multiple',
+        question: '“需要”和“想要”的区别是什么？',
+        options: ['没有区别，都是想买的东西', '“需要”是生活必需的，“想要”是可有可无的', '“需要”是贵的，“想要”是便宜的'],
+        answer: '“需要”是生活必需的，“想要”是可有可无的',
+        correctHint: '答对了！买“需要”的东西，偶尔奖励自己“想要”的东西，但要控制比例。',
+        wrongHint: '不对哦，买“需要”的东西，偶尔奖励自己“想要”的东西，但要控制比例。'
+    },
+    {
+        type: 'multiple',
+        question: '小明的压岁钱收到了2000元，以下哪种分配方式最合理？',
+        options: ['全部拿来买游戏装备', '全部存起来不动', '一部分存起来，一部分用来买学习用品，一小部分作为零花'],
+        answer: '一部分存起来，一部分用来买学习用品，一小部分作为零花',
+        correctHint: '答对了！压岁钱可以按“储蓄+消费+分享”的方式分配，学会规划。',
+        wrongHint: '不对哦，压岁钱可以按“储蓄+消费+分享”的方式分配，学会规划。'
+    },
+    {
+        type: 'multiple',
+        question: '如果你借了同学10元钱，你应该怎么做？',
+        options: ['假装忘记了', '等同学催了再还', '按时归还，信守承诺'],
+        answer: '按时归还，信守承诺',
+        correctHint: '答对了！信用是人的无形资产，按时还钱才能赢得别人的信任。',
+        wrongHint: '不对哦，信用是人的无形资产，按时还钱才能赢得别人的信任。'
+    },
+    {
+        type: 'multiple',
+        question: '以下哪个是银行储蓄的主要好处？',
+        options: ['钱会变多（获得利息）', '银行会送礼物', '存钱后就不能取出来了'],
+        answer: '钱会变多（获得利息）',
+        correctHint: '答对了！把钱存银行不仅安全，还能获得利息，让钱“生”钱。',
+        wrongHint: '不对哦，把钱存银行不仅安全，还能获得利息，让钱“生”钱。'
+    },
+    {
+        type: 'multiple',
+        question: '什么是“预算”？',
+        options: ['随便花钱，花完再说', '提前计划好收入和支出的安排', '把钱藏起来'],
+        answer: '提前计划好收入和支出的安排',
+        correctHint: '答对了！做预算就像给钱做“行程表”，让你知道钱该花在哪儿。',
+        wrongHint: '不对哦，做预算就像给钱做“行程表”，让你知道钱该花在哪儿。'
+    },
+    {
+        type: 'multiple',
+        question: '小明想买一个300元的书包，他每周零花钱是50元，如果每周存30元，需要几周才能买到？',
+        options: ['6周', '10周', '15周'],
+        answer: '10周',
+        correctHint: '答对了！通过计算和规划，你会明白攒钱需要耐心，也会更珍惜买到的物品。',
+        wrongHint: '不对哦，通过计算和规划，你会明白攒钱需要耐心，也会更珍惜买到的物品。'
+    },
+    {
+        type: 'multiple',
+        question: '以下哪种做法能帮助你养成记账的好习惯？',
+        options: ['每天记录收入和支出', '月底想起来再记', '不记，反正钱不多'],
+        answer: '每天记录收入和支出',
+        correctHint: '答对了！记账能让你清楚钱花在哪里，发现不必要的开支。',
+        wrongHint: '不对哦，记账能让你清楚钱花在哪里，发现不必要的开支。'
+    },
+    {
+        type: 'multiple',
+        question: '“价格”和“价值”的关系，以下说法正确的是？',
+        options: ['价格高的东西价值一定高', '价格低的东西没有价值', '价格不一定等于价值，要看你是否真的需要'],
+        answer: '价格不一定等于价值，要看你是否真的需要',
+        correctHint: '答对了！一件东西对你的价值，取决于你用它做什么，而不是它的标价。',
+        wrongHint: '不对哦，一件东西对你的价值，取决于你用它做什么，而不是它的标价。'
+    },
+    {
+        type: 'multiple',
+        question: '以下哪个是“理性消费”的表现？',
+        options: ['看到别人买，自己也跟着买', '买东西前，先比较价格和质量', '只买最贵的东西'],
+        answer: '买东西前，先比较价格和质量',
+        correctHint: '答对了！理性消费就是“聪明地花钱”，不攀比，不盲从。',
+        wrongHint: '不对哦，理性消费就是“聪明地花钱”，不攀比，不盲从。'
+    },
+    {
+        type: 'multiple',
+        question: '什么是“通货膨胀”？',
+        options: ['钱变得更值钱了', '物价上涨，钱的购买力下降', '银行利息变高'],
+        answer: '物价上涨，钱的购买力下降',
+        correctHint: '答对了！简单说，就是以前10元能买的东西，现在可能要12元了。',
+        wrongHint: '不对哦，简单说，就是以前10元能买的东西，现在可能要12元了。'
+    },
+    {
+        type: 'multiple',
+        question: '如果你中了100元彩票（假设未成年人合法中奖），以下哪种处理方式最明智？',
+        options: ['马上全部花掉', '拿出一部分庆祝，剩下的存起来或买需要的东西', '再买100元彩票'],
+        answer: '拿出一部分庆祝，剩下的存起来或买需要的东西',
+        correctHint: '答对了！意外之财更要理性规划，而不是全部挥霍。',
+        wrongHint: '不对哦，意外之财更要理性规划，而不是全部挥霍。'
+    },
+    {
+        type: 'multiple',
+        question: '关于“借钱消费”，以下说法正确的是？',
+        options: ['借钱买东西很酷', '借钱消费要谨慎，因为需要还本付息，可能带来压力', '借钱不用还'],
+        answer: '借钱消费要谨慎，因为需要还本付息，可能带来压力',
+        correctHint: '答对了！借钱容易还钱难，除非必要，尽量不借钱消费。',
+        wrongHint: '不对哦，借钱容易还钱难，除非必要，尽量不借钱消费。'
+    },
+    {
+        type: 'multiple',
+        question: '以下哪个是“资产”？',
+        options: ['能为你带来收入的东西，比如储蓄、出租的房子', '你欠别人的钱', '每天花掉的钱'],
+        answer: '能为你带来收入的东西，比如储蓄、出租的房子',
+        correctHint: '答对了！资产是能把钱放进你口袋的东西，负债是把钱从你口袋拿走的东西。',
+        wrongHint: '不对哦，资产是能把钱放进你口袋的东西，负债是把钱从你口袋拿走的东西。'
+    },
+    {
+        type: 'multiple',
+        question: '你看到一款玩具，标价“原价200元，现价5折”，打完折是多少钱？',
+        options: ['100元', '150元', '50元'],
+        answer: '100元',
+        correctHint: '答对了！学会算折扣，能帮你判断是不是真的划算。',
+        wrongHint: '不对哦，学会算折扣，能帮你判断是不是真的划算。'
+    },
+    {
+        type: 'multiple',
+        question: '以下哪个是“被动收入”？',
+        options: ['帮爸妈做家务赚的钱', '存款利息', '过年收到的压岁钱'],
+        answer: '存款利息',
+        correctHint: '答对了！被动收入就是你“躺着也能赚”的钱，比如利息、分红。',
+        wrongHint: '不对哦，被动收入就是你“躺着也能赚”的钱，比如利息、分红。'
+    },
+    {
+        type: 'multiple',
+        question: '如果你的朋友向你推荐一个“稳赚不赔”的投资项目，你应该怎么做？',
+        options: ['马上投钱，机会难得', '保持警惕，世上没有稳赚不赔的事，先问家长', '借钱去投资'],
+        answer: '保持警惕，世上没有稳赚不赔的事，先问家长',
+        correctHint: '答对了！凡是说“稳赚不赔”的，基本都是骗局。投资有风险，不懂不投。',
+        wrongHint: '不对哦，凡是说“稳赚不赔”的，基本都是骗局。投资有风险，不懂不投。'
+    },
+    {
+        type: 'multiple',
+        question: '以下哪个是合理的“零花钱管理”方式？',
+        options: ['周初花完，周末再找爸妈要', '分成“储蓄”“消费”“爱心”三份，按计划使用', '全部存起来，一分不花'],
+        answer: '分成“储蓄”“消费”“爱心”三份，按计划使用',
+        correctHint: '答对了！把钱分装在不同的“罐子”里，是培养理财习惯的好方法。',
+        wrongHint: '不对哦，把钱分装在不同的“罐子”里，是培养理财习惯的好方法。'
+    },
+    {
+        type: 'multiple',
+        question: '什么是“复利”？',
+        options: ['利息不产生利息', '利滚利，本金和利息一起继续生息', '银行扣的手续费'],
+        answer: '利滚利，本金和利息一起继续生息',
+        correctHint: '答对了！复利被称为世界第八大奇迹，越早开始储蓄，复利效果越惊人。',
+        wrongHint: '不对哦，复利被称为世界第八大奇迹，越早开始储蓄，复利效果越惊人。'
+    },
+    {
+        type: 'multiple',
+        question: '小红的妈妈给她100元让她去超市买一周的零食，以下哪种做法最合理？',
+        options: ['第一天全部买完自己喜欢的零食', '先列个清单，按需购买，剩下的存起来', '买最便宜的零食，把钱省下来买玩具'],
+        answer: '先列个清单，按需购买，剩下的存起来',
+        correctHint: '答对了！有计划的消费能让你既满足需求，又能学会节约。',
+        wrongHint: '不对哦，有计划的消费能让你既满足需求，又能学会节约。'
+    },
+    {
+        type: 'multiple',
+        question: '关于“捐赠”或“慈善”，以下说法正确的是？',
+        options: ['只有有钱人才能做慈善', '在自己有能力的情况下，帮助有需要的人，是一种美德', '捐赠是浪费钱'],
+        answer: '在自己有能力的情况下，帮助有需要的人，是一种美德',
+        correctHint: '答对了！理财不仅是管好自己的钱，也包括用钱传递善意。',
+        wrongHint: '不对哦，理财不仅是管好自己的钱，也包括用钱传递善意。'
+    },
+    {
+        type: 'multiple',
+        question: '如果你在网购时看到一个商品“限时秒杀”倒计时，你应该？',
+        options: ['赶紧下单，慢了就没了', '先冷静，确认是否真的需要，再对比价格', '不管需要不需要，先买下来再说'],
+        answer: '先冷静，确认是否真的需要，再对比价格',
+        correctHint: '答对了！商家常用“限时”“限量”制造紧迫感，不要被冲动牵着走。',
+        wrongHint: '不对哦，商家常用“限时”“限量”制造紧迫感，不要被冲动牵着走。'
+    },
+    {
+        type: 'multiple',
+        question: '以下哪种情况属于“攀比消费”？',
+        options: ['因为同学有最新款球鞋，所以自己也要买', '自己的鞋子坏了，买一双新鞋', '用自己的零花钱给妈妈买生日礼物'],
+        answer: '因为同学有最新款球鞋，所以自己也要买',
+        correctHint: '答对了！为面子花钱，最后只会让自己“累”。',
+        wrongHint: '不对哦，为面子花钱，最后只会让自己“累”。'
+    },
+    {
+        type: 'multiple',
+        question: '“基金”是什么？',
+        options: ['存钱罐', '一种将很多人钱集中起来，由专业的人去投资的方式', '银行送的小礼品'],
+        answer: '一种将很多人钱集中起来，由专业的人去投资的方式',
+        correctHint: '答对了！基金适合没有太多投资经验的人，但仍需了解风险。',
+        wrongHint: '不对哦，基金适合没有太多投资经验的人，但仍需了解风险。'
+    },
+    {
+        type: 'multiple',
+        question: '以下哪个是“风险”在理财中的含义？',
+        options: ['一定能赚钱', '投资可能亏钱的不确定性', '银行倒闭'],
+        answer: '投资可能亏钱的不确定性',
+        correctHint: '答对了！收益越高，风险通常也越高。保住本金是第一位的。',
+        wrongHint: '不对哦，收益越高，风险通常也越高。保住本金是第一位的。'
+    },
+    {
+        type: 'multiple',
+        question: '小明想买一个200元的乐高，但他只有150元，以下哪种做法最合适？',
+        options: ['向同学借钱，凑够200元买', '再攒一段时间，等钱够了再买', '让爸妈补贴，马上买'],
+        answer: '再攒一段时间，等钱够了再买',
+        correctHint: '答对了！通过自己攒钱买到的物品，你会更珍惜，也学会了为目标坚持。',
+        wrongHint: '不对哦，通过自己攒钱买到的物品，你会更珍惜，也学会了为目标坚持。'
+    },
+    {
+        type: 'multiple',
+        question: '“信用记录”对一个人有什么影响？',
+        options: ['没有影响', '会影响未来贷款买房、买车等', '只影响网购'],
+        answer: '会影响未来贷款买房、买车等',
+        correctHint: '答对了！良好的信用记录是“经济身份证”，从小就要重视诚信。',
+        wrongHint: '不对哦，良好的信用记录是“经济身份证”，从小就要重视诚信。'
+    },
+    {
+        type: 'multiple',
+        question: '以下哪个是“保值”的意思？',
+        options: ['让钱不变少，至少跑赢通货膨胀', '让钱翻倍', '把钱藏在家里'],
+        answer: '让钱不变少，至少跑赢通货膨胀',
+        correctHint: '答对了！如果钱存着不理财，通货膨胀会让它慢慢“缩水”。',
+        wrongHint: '不对哦，如果钱存着不理财，通货膨胀会让它慢慢“缩水”。'
+    },
+    {
+        type: 'multiple',
+        question: '关于“赚钱”和“花钱”，以下哪种观念是正确的？',
+        options: ['赚钱是大人的事，小孩只管花', '钱是通过劳动和智慧创造的，要珍惜每一分钱', '赚钱很容易，不用珍惜'],
+        answer: '钱是通过劳动和智慧创造的，要珍惜每一分钱',
+        correctHint: '答对了！理解钱的来之不易，才能学会珍惜和感恩。',
+        wrongHint: '不对哦，理解钱的来之不易，才能学会珍惜和感恩。'
+    },
+    {
+        type: 'boolean',
+        question: '钱存在家里比存在银行更安全。',
+        options: ['对', '错'],
+        answer: '错',
+        correctHint: '答对了！银行受国家存款保险制度保护，存在银行更安全，还能获得利息。',
+        wrongHint: '不对哦，银行受国家存款保险制度保护，存在银行更安全，还能获得利息。'
+    },
+    {
+        type: 'boolean',
+        question: '只要东西打折，就应该买，不管需不需要。',
+        options: ['对', '错'],
+        answer: '错',
+        correctHint: '答对了！不需要的东西，哪怕免费也是一种浪费。',
+        wrongHint: '不对哦，不需要的东西，哪怕免费也是一种浪费。'
+    },
+    {
+        type: 'boolean',
+        question: '学会记账能帮助我控制不必要的开支。',
+        options: ['对', '错'],
+        answer: '对',
+        correctHint: '答对了！记账是理财的基础，能让你看清钱的去向。',
+        wrongHint: '不对哦，记账是理财的基础，能让你看清钱的去向。'
+    },
+    {
+        type: 'boolean',
+        question: '压岁钱是长辈的心意，我可以随意花，不用规划。',
+        options: ['对', '错'],
+        answer: '错',
+        correctHint: '答对了！压岁钱是学习理财的好机会，合理规划能让它更有意义。',
+        wrongHint: '不对哦，压岁钱是学习理财的好机会，合理规划能让它更有意义。'
+    },
+    {
+        type: 'boolean',
+        question: '借钱给朋友时，不用写借条，因为是朋友。',
+        options: ['对', '错'],
+        answer: '错',
+        correctHint: '答对了！好朋友之间更要明算账，借条是保护双方权益的方式。',
+        wrongHint: '不对哦，好朋友之间更要明算账，借条是保护双方权益的方式。'
+    },
+    {
+        type: 'boolean',
+        question: '如果我有100元，全部买成股票，一定能赚更多钱。',
+        options: ['对', '错'],
+        answer: '错',
+        correctHint: '答对了！股票有涨有跌，可能赚钱也可能亏钱，不要把鸡蛋放在一个篮子里。',
+        wrongHint: '不对哦，股票有涨有跌，可能赚钱也可能亏钱，不要把鸡蛋放在一个篮子里。'
+    },
+    {
+        type: 'boolean',
+        question: '存钱的目标越具体，越容易坚持下去。',
+        options: ['对', '错'],
+        answer: '对',
+        correctHint: '答对了！比如“我要存500元买一本书”，比“我要存钱”更容易实现。',
+        wrongHint: '不对哦，比如“我要存500元买一本书”，比“我要存钱”更容易实现。'
+    },
+    {
+        type: 'boolean',
+        question: '买东西只挑最便宜的，不用考虑质量。',
+        options: ['对', '错'],
+        answer: '错',
+        correctHint: '答对了！性价比才是关键，质量差的便宜货可能更“贵”。',
+        wrongHint: '不对哦，性价比才是关键，质量差的便宜货可能更“贵”。'
+    },
+    {
+        type: 'boolean',
+        question: '如果我不小心弄丢了同学的文具，应该主动赔偿。',
+        options: ['对', '错'],
+        answer: '对',
+        correctHint: '答对了！承担责任是诚信的表现，也是财商的一部分。',
+        wrongHint: '不对哦，承担责任是诚信的表现，也是财商的一部分。'
+    },
+    {
+        type: 'boolean',
+        question: '投资只是大人的事，小学生不需要了解。',
+        options: ['对', '错'],
+        answer: '错',
+        correctHint: '答对了！从小了解投资的基本概念，长大后才能更好地理财。',
+        wrongHint: '不对哦，从小了解投资的基本概念，长大后才能更好地理财。'
+    },
+    {
+        type: 'boolean',
+        question: '信用卡的钱是银行送的，可以随便花。',
+        options: ['对', '错'],
+        answer: '错',
+        correctHint: '答对了！信用卡的钱是借来的，必须按时还，否则会影响信用。',
+        wrongHint: '不对哦，信用卡的钱是借来的，必须按时还，否则会影响信用。'
+    },
+    {
+        type: 'boolean',
+        question: '用自己的劳动换取报酬，比如做家务或摆摊，是体验赚钱的好方式。',
+        options: ['对', '错'],
+        answer: '对',
+        correctHint: '答对了！劳动赚钱能让你更理解钱的来之不易。',
+        wrongHint: '不对哦，劳动赚钱能让你更理解钱的来之不易。'
+    },
+    {
+        type: 'boolean',
+        question: '如果我有100元，我只花50元，剩下50元存起来，这叫“量入为出”。',
+        options: ['对', '错'],
+        answer: '对',
+        correctHint: '答对了！花的钱不超过赚的钱，是理财的基本原则。',
+        wrongHint: '不对哦，花的钱不超过赚的钱，是理财的基本原则。'
+    },
+    {
+        type: 'boolean',
+        question: '商品的价格永远等于它的价值。',
+        options: ['对', '错'],
+        answer: '错',
+        correctHint: '答对了！价格受供需、品牌等因素影响，不一定完全反映真实价值。',
+        wrongHint: '不对哦，价格受供需、品牌等因素影响，不一定完全反映真实价值。'
+    },
+    {
+        type: 'boolean',
+        question: '我可以用零花钱给家人买小礼物，表达心意。',
+        options: ['对', '错'],
+        answer: '对',
+        correctHint: '答对了！用钱表达爱和感恩，是金钱的正向价值。',
+        wrongHint: '不对哦，用钱表达爱和感恩，是金钱的正向价值。'
+    },
+    {
+        type: 'boolean',
+        question: '银行的利息和投资的分红，都属于“被动收入”。',
+        options: ['对', '错'],
+        answer: '对',
+        correctHint: '答对了！被动收入让你不用工作也能有收入，是财务自由的基础。',
+        wrongHint: '不对哦，被动收入让你不用工作也能有收入，是财务自由的基础。'
+    },
+    {
+        type: 'boolean',
+        question: '看到同学买了新东西，我也一定要买，不然会被笑话。',
+        options: ['对', '错'],
+        answer: '错',
+        correctHint: '答对了！真正的自信不需要靠物品证明，不攀比是成熟的标志。',
+        wrongHint: '不对哦，真正的自信不需要靠物品证明，不攀比是成熟的标志。'
+    },
+    {
+        type: 'boolean',
+        question: '如果我中了500万彩票，我可以不上学了。',
+        options: ['对', '错'],
+        answer: '错',
+        correctHint: '答对了！金钱不能替代知识和能力，学习和成长才是一辈子的财富。',
+        wrongHint: '不对哦，金钱不能替代知识和能力，学习和成长才是一辈子的财富。'
+    },
+    {
+        type: 'boolean',
+        question: '通过参加“轻松赚钱”的广告，不用劳动就能赚大钱，这很可能是个骗局。',
+        options: ['对', '错'],
+        answer: '对',
+        correctHint: '答对了！天上不会掉馅饼，任何“不劳而获”的承诺都要警惕。',
+        wrongHint: '不对哦，天上不会掉馅饼，任何“不劳而获”的承诺都要警惕。'
+    },
+    {
+        type: 'boolean',
+        question: '理财就是“怎么省钱”，和“怎么赚钱”没关系。',
+        options: ['对', '错'],
+        answer: '错',
+        correctHint: '答对了！理财包括赚钱、花钱、存钱、投资、保障等，是一个完整的体系。',
+        wrongHint: '不对哦，理财包括赚钱、花钱、存钱、投资、保障等，是一个完整的体系。'
+    },
+    {
+        type: 'multiple',
+        question: '你在玩手机游戏时，有陌生人发消息说“加QQ群免费领游戏皮肤”，你应该怎么做？',
+        options: ['马上加群领取，机会难得', '不相信，告诉家长并举报', '先加群看看，如果不让充值再退出来'],
+        answer: '不相信，告诉家长并举报',
+        correctHint: '答对了！免费领皮肤是中小学生被骗最多的套路！骗子会以“账号异常”“未成年操作”为由恐吓你，让你用家长手机转账。',
+        wrongHint: '不对哦，免费领皮肤是中小学生被骗最多的套路！骗子会以“账号异常”“未成年操作”为由恐吓你，让你用家长手机转账。'
+    },
+    {
+        type: 'multiple',
+        question: '你在二手平台看到有人低价卖高等级的“游戏账号”，对方让你直接微信转账，不要走平台，因为“平台手续费高”。此时你应该？',
+        options: ['为了省钱直接微信转账', '坚持通过正规平台交易', '只要价格够低，怎么付都行'],
+        answer: '坚持通过正规平台交易',
+        correctHint: '答对了！凡是绕过正规平台私下交易的，基本都是诈骗。钱转过去后，对方可能直接拉黑，或者通过“账号找回”功能把卖给你的账号再拿回去。',
+        wrongHint: '不对哦，凡是绕过正规平台私下交易的，基本都是诈骗。钱转过去后，对方可能直接拉黑，或者通过“账号找回”功能把卖给你的账号再拿回去。'
+    },
+    {
+        type: 'multiple',
+        question: '有人在游戏里自称是“代练”，说只要给他账号密码，就能帮你快速上分，你应该？',
+        options: ['把账号密码给他，反正没什么钱', '给他一半密码，试探一下', '坚决不给，账号密码不能告诉任何人'],
+        answer: '坚决不给，账号密码不能告诉任何人',
+        correctHint: '答对了！把账号密码告诉陌生人，不仅会被盗号，骗子还可能用你的账号去诈骗你的好友。',
+        wrongHint: '不对哦，把账号密码告诉陌生人，不仅会被盗号，骗子还可能用你的账号去诈骗你的好友。'
+    },
+    {
+        type: 'multiple',
+        question: '你在QQ上收到好朋友“小明”发来的消息，说他受伤在医院急用钱，发了一个收款码，让你扫码转200元给他，你应该？',
+        options: ['朋友有难，马上转账', '打电话或当面找小明核实', '先转一半，剩下的明天再说'],
+        answer: '打电话或当面找小明核实',
+        correctHint: '答对了！这是典型的冒充熟人诈骗。盗号后，骗子会群发消息借钱，一定要通过电话或见面核实。',
+        wrongHint: '不对哦，这是典型的冒充熟人诈骗。盗号后，骗子会群发消息借钱，一定要通过电话或见面核实。'
+    },
+    {
+        type: 'multiple',
+        question: '如果你的QQ或微信被盗，你应该第一时间怎么做？',
+        options: ['不管它，反正号不要了', '赶紧通知亲朋好友，提醒他们不要上当，并尝试找回密码', '在空间发一条说说骂盗号的人'],
+        answer: '赶紧通知亲朋好友，提醒他们不要上当，并尝试找回密码',
+        correctHint: '答对了！第一时间通知亲友，可以防止骗子利用你的身份去骗你身边的人。',
+        wrongHint: '不对哦，第一时间通知亲友，可以防止骗子利用你的身份去骗你身边的人。'
+    },
+    {
+        type: 'multiple',
+        question: '有个网友和你聊了很久，你觉得很投缘，对方约你周末去公园见面，你应该？',
+        options: ['一个人偷偷去赴约', '叫上同学一起去', '拒绝，并将情况告诉家长，网友见面风险极高'],
+        answer: '拒绝，并将情况告诉家长，网友见面风险极高',
+        correctHint: '答对了！网络对面的人性别、年龄、身份都可能是假的。中小学生绝对不要单独约见网友。',
+        wrongHint: '不对哦，网络对面的人性别、年龄、身份都可能是假的。中小学生绝对不要单独约见网友。'
+    },
+    {
+        type: 'multiple',
+        question: '你在短视频平台看到喜欢的明星过生日，评论区说“扫码进群领签名照和188元红包”，但扫码后提示“未成年人操作导致账户冻结”，需要拿家长手机“解冻”，这时你？',
+        options: ['赶紧拿家长手机按对方说的做，不然要坐牢', '告诉家长，这是诈骗，千万不要转账', '很害怕，但先转一点试试看'],
+        answer: '告诉家长，这是诈骗，千万不要转账',
+        correctHint: '答对了！这是针对追星学生的精准诈骗。骗子利用“未成年导致公司账户冻结”等借口恐吓学生，诱导偷拿家长手机转账。',
+        wrongHint: '不对哦，这是针对追星学生的精准诈骗。骗子利用“未成年导致公司账户冻结”等借口恐吓学生，诱导偷拿家长手机转账。'
+    },
+    {
+        type: 'multiple',
+        question: '你的“爱豆”（偶像）建了一个粉丝群，群主说充值99元可以返利999元，充得越多返得越多，这属于？',
+        options: ['粉丝福利，明星宠粉', '刷单返利类诈骗', '正常的粉丝应援活动'],
+        answer: '刷单返利类诈骗',
+        correctHint: '答对了！凡是“高额返利”“充值返现”都是诈骗。明星不会在群里让你直接转账。',
+        wrongHint: '不对哦，凡是“高额返利”“充值返现”都是诈骗。明星不会在群里让你直接转账。'
+    },
+    {
+        type: 'multiple',
+        question: '你收到一条短信：“恭喜你被抽中为幸运用户，获得笔记本电脑一台，点击链接填写信息即可领取。”你应该？',
+        options: ['很开心，马上点击链接填写', '忽略或删除，不点击陌生链接', '转发给朋友一起领'],
+        answer: '忽略或删除，不点击陌生链接',
+        correctHint: '答对了！这是钓鱼短信。陌生链接不要点，可能会盗取你的个人信息或让手机中毒。',
+        wrongHint: '不对哦，这是钓鱼短信。陌生链接不要点，可能会盗取你的个人信息或让手机中毒。'
+    },
+    {
+        type: 'multiple',
+        question: '在社交平台看到有人卖“超低价全新iPhone”，远低于市场价，卖家让你先付定金，你该怎么做？',
+        options: ['这么便宜，赶紧抢购', '天下没有免费的午餐，这很可能是骗局', '付一半定金，赌一把'],
+        answer: '天下没有免费的午餐，这很可能是骗局',
+        correctHint: '答对了！贪小便宜吃大亏。网上购物一定要在正规平台进行，不要直接转账。',
+        wrongHint: '不对哦，贪小便宜吃大亏。网上购物一定要在正规平台进行，不要直接转账。'
+    },
+    {
+        type: 'multiple',
+        question: '接到自称是“公安局”的电话，说你涉嫌犯罪，要求你把钱转到“安全账户”配合调查，你应该？',
+        options: ['很害怕，赶紧按他说的转钱', '告诉对方自己未成年，没钱', '挂断电话，告诉家长，警察不会在网上办案'],
+        answer: '挂断电话，告诉家长，警察不会在网上办案',
+        correctHint: '答对了！公检法机关绝不会通过电话办案，更没有“安全账户”。凡是让你转账到“安全账户”的都是诈骗。',
+        wrongHint: '不对哦，公检法机关绝不会通过电话办案，更没有“安全账户”。凡是让你转账到“安全账户”的都是诈骗。'
+    },
+    {
+        type: 'multiple',
+        question: '网上有人发消息说：“我知道你在看不良网站，我控制了你的摄像头，给我转500元，否则把你的视频发给通讯录好友。”你应该？',
+        options: ['觉得丢人，转账求放过', '不理会，这是诈骗，直接拉黑举报', '跟他砍价，少给一点'],
+        answer: '不理会，这是诈骗，直接拉黑举报',
+        correctHint: '答对了！这是“裸聊”敲诈的变种，但针对学生可能是“恐吓”诈骗。不要相信，直接拉黑，就算转了钱，对方还会继续勒索。',
+        wrongHint: '不对哦，这是“裸聊”敲诈的变种，但针对学生可能是“恐吓”诈骗。不要相信，直接拉黑，就算转了钱，对方还会继续勒索。'
+    },
+    {
+        type: 'multiple',
+        question: '以下哪个密码安全性最高？',
+        options: ['123456', '生日日期', '字母+数字+符号组合，且不同账号不同密码'],
+        answer: '字母+数字+符号组合，且不同账号不同密码',
+        correctHint: '答对了！简单的密码容易被黑客“撞库”破解。',
+        wrongHint: '不对哦，简单的密码容易被黑客“撞库”破解。'
+    },
+    {
+        type: 'multiple',
+        question: '以下哪种行为最容易导致个人信息泄露？',
+        options: ['在朋友圈晒没打码的火车票、飞机票', '下载国家反诈中心APP', '设置手机锁屏密码'],
+        answer: '在朋友圈晒没打码的火车票、飞机票',
+        correctHint: '答对了！火车票上的二维码包含姓名、身份证号等信息，晒图前一定要打码。',
+        wrongHint: '不对哦，火车票上的二维码包含姓名、身份证号等信息，晒图前一定要打码。'
+    },
+    {
+        type: 'multiple',
+        question: '“验证码”相当于什么？',
+        options: ['普通的数字串', '电子支付密码或身份证件，打死都不能告诉别人', '可以发给朋友帮他登录'],
+        answer: '电子支付密码或身份证件，打死都不能告诉别人',
+        correctHint: '答对了！验证码是资金安全的最后一道防线。任何人（包括自称客服、警察的人）索要验证码，都是骗子。',
+        wrongHint: '不对哦，验证码是资金安全的最后一道防线。任何人（包括自称客服、警察的人）索要验证码，都是骗子。'
+    },
+    {
+        type: 'multiple',
+        question: '你在网上看到“打字员兼职，日入300元，会打字就能赚钱”，但需要先交200元“入职押金”，这是？',
+        options: ['一份适合学生的高薪工作', '刷单返利类诈骗的前奏', '正常的入职手续'],
+        answer: '刷单返利类诈骗的前奏',
+        correctHint: '答对了！所有“先交钱再工作”的兼职都是诈骗。学生找兼职一定要通过正规渠道，且需监护人陪同。',
+        wrongHint: '不对哦，所有“先交钱再工作”的兼职都是诈骗。学生找兼职一定要通过正规渠道，且需监护人陪同。'
+    },
+    {
+        type: 'multiple',
+        question: '同学跟你说，有个“刷单”的活，先垫钱买东西，之后本金和佣金一起返，一单能赚50元，你应该？',
+        options: ['跟着同学一起赚钱', '拒绝，并提醒同学这是诈骗', '先刷一单试试水'],
+        answer: '拒绝，并提醒同学这是诈骗',
+        correctHint: '答对了！刷单本身就是违法行为。前期返利几块钱是诱饵，后期会以“连单”“卡单”为由让你投入更多，直到把你榨干。',
+        wrongHint: '不对哦，刷单本身就是违法行为。前期返利几块钱是诱饵，后期会以“连单”“卡单”为由让你投入更多，直到把你榨干。'
+    },
+    {
+        type: 'multiple',
+        question: '班级家长群里，有一个头像和班主任一样的人发消息：“紧急通知，请家长缴纳资料费198元，扫描下方二维码缴费。”你应该提醒家长注意什么？',
+        options: ['马上转账，别耽误学习', '打电话或当面与班主任核实，确认是否老师本人发的', '只要是老师发的就不会错'],
+        answer: '打电话或当面与班主任核实，确认是否老师本人发的',
+        correctHint: '答对了！骗子会混进家长群，复制老师的头像和昵称进行诈骗。缴费一定要通过电话或当面核实。',
+        wrongHint: '不对哦，骗子会混进家长群，复制老师的头像和昵称进行诈骗。缴费一定要通过电话或当面核实。'
+    },
+    {
+        type: 'multiple',
+        question: '你的手机突然收到一条短信，显示“学校通”发来的，内容是“某某同学家长，这是您孩子本学期的成绩单，请点击链接下载查看”，你应该？',
+        options: ['立刻点击查看成绩', '转发给爸爸妈妈让他们点', '不点击，这是诈骗短信，可能含有木马病毒'],
+        answer: '不点击，这是诈骗短信，可能含有木马病毒',
+        correctHint: '答对了！不明链接不要点。骗子常利用家长关心孩子成绩的心理进行诈骗。',
+        wrongHint: '不对哦，不明链接不要点。骗子常利用家长关心孩子成绩的心理进行诈骗。'
+    },
+    {
+        type: 'multiple',
+        question: '如果你发现自己或家长的钱被骗了，第一时间应该做什么？',
+        options: ['自己想办法联系骗子把钱要回来', '因为怕被骂，不敢告诉任何人', '马上告诉家长，并拨打110报警或去派出所'],
+        answer: '马上告诉家长，并拨打110报警或去派出所',
+        correctHint: '答对了！被骗后不要慌张，不要害怕被骂。越早报警，止付冻结的成功率越高。',
+        wrongHint: '不对哦，被骗后不要慌张，不要害怕被骂。越早报警，止付冻结的成功率越高。'
+    },
+    {
+        type: 'multiple',
+        question: '关于“国家反诈中心”APP，以下说法正确的是？',
+        options: ['装了会窃取隐私，不能装', '是官方推出的反诈软件，能拦截诈骗电话，应该安装并开启预警', '只有老年人需要装，学生不需要'],
+        answer: '是官方推出的反诈软件，能拦截诈骗电话，应该安装并开启预警',
+        correctHint: '答对了！这是国家公安部推出的“防骗神器”，建议学生和家长一起安装注册。',
+        wrongHint: '不对哦，这是国家公安部推出的“防骗神器”，建议学生和家长一起安装注册。'
+    },
+    {
+        type: 'multiple',
+        question: '以下哪个电话号码是全国反诈预警劝阻专线，接到这个电话说明你可能正在被骗？',
+        options: ['110', '120', '96110'],
+        answer: '96110',
+        correctHint: '答对了！96110是反诈专用号码，来电一定要接听！12381是反诈预警短信。',
+        wrongHint: '不对哦，96110是反诈专用号码，来电一定要接听！12381是反诈预警短信。'
+    },
+    {
+        type: 'multiple',
+        question: '在网上，有人要你拍摄“手持身份证”的照片发给他，理由是“验证身份，之后给你发红包”，你应该？',
+        options: ['拍给他，反正照片不露脸', '拒绝，身份证照片不能随意发给陌生人', '打上马赛克发给他'],
+        answer: '拒绝，身份证照片不能随意发给陌生人',
+        correctHint: '答对了！手持身份证照片是重要的个人隐私，一旦泄露，可能被骗子用来办理贷款或实施其他诈骗。',
+        wrongHint: '不对哦，手持身份证照片是重要的个人隐私，一旦泄露，可能被骗子用来办理贷款或实施其他诈骗。'
+    },
+    {
+        type: 'multiple',
+        question: '当你收到一条陌生短信，里面有一个链接，并说“你的ETC已过期，请点击链接重新认证”，你应该？',
+        options: ['赶紧点开认证，以免影响出行', '先问一下父母，如果父母让点就点', '不点链接，这是钓鱼网站，目的是骗取银行卡信息'],
+        answer: '不点链接，这是钓鱼网站，目的是骗取银行卡信息',
+        correctHint: '答对了！这类诈骗专门针对车主。正规的ETC认证不会通过短信链接办理。',
+        wrongHint: '不对哦，这类诈骗专门针对车主。正规的ETC认证不会通过短信链接办理。'
+    },
+    {
+        type: 'multiple',
+        question: '下面哪句话是对的？',
+        options: ['只要我没有钱，骗子就骗不到我，家长的钱跟我没关系', '骗子会诱导我用家长的手机转账，所以我也要了解反诈知识', '只有老年人才会被骗，小学生不会被骗'],
+        answer: '骗子会诱导我用家长的手机转账，所以我也要了解反诈知识',
+        correctHint: '答对了！很多中小学生被骗是因为偷拿或诱导家长刷脸、输密码。学生也是反诈的重要一环。',
+        wrongHint: '不对哦，很多中小学生被骗是因为偷拿或诱导家长刷脸、输密码。学生也是反诈的重要一环。'
+    },
+    {
+        type: 'multiple',
+        question: '你在路边捡到一张“刮刮卡”，刮开后显示中了“二等奖 5万元”，需要打电话领奖，你应该？',
+        options: ['马上打电话领奖', '扔掉，这是骗局', '让爸妈帮我去领奖'],
+        answer: '扔掉，这是骗局',
+        correctHint: '答对了！路边捡的中奖卡都是骗局。骗子会以“手续费”“公证费”为由让你先交钱。',
+        wrongHint: '不对哦，路边捡的中奖卡都是骗局。骗子会以“手续费”“公证费”为由让你先交钱。'
+    },
+    {
+        type: 'multiple',
+        question: '如果有人给你发了一个“红包链接”，点进去之后显示需要输入银行卡号和密码才能提现，你应该？',
+        options: ['为了提现，赶紧输入', '关掉页面，这是诈骗', '输入假的号码试试'],
+        answer: '关掉页面，这是诈骗',
+        correctHint: '答对了！正规的红包不需要输入银行卡密码。凡是需要输入支付信息的“红包”都是骗钱的。',
+        wrongHint: '不对哦，正规的红包不需要输入银行卡密码。凡是需要输入支付信息的“红包”都是骗钱的。'
+    },
+    {
+        type: 'multiple',
+        question: '骗子在掌握了你的姓名、学校、家庭住址后，更容易实施什么诈骗？',
+        options: ['冒充绑架/车祸，对你的家长进行“紧急”诈骗', '网络游戏诈骗', '刷单诈骗'],
+        answer: '冒充绑架/车祸，对你的家长进行“紧急”诈骗',
+        correctHint: '答对了！信息泄露后，骗子可能会在屏蔽你手机信号的情况下，打电话给你家长谎称你被绑架，由于骗子能准确说出你的信息，家长很容易上当。',
+        wrongHint: '不对哦，信息泄露后，骗子可能会在屏蔽你手机信号的情况下，打电话给你家长谎称你被绑架，由于骗子能准确说出你的信息，家长很容易上当。'
+    },
+    {
+        type: 'multiple',
+        question: '以下哪个行为是安全的？',
+        options: ['在网吧或公共电脑上登录网银后，直接关掉网页就走', '在手机上下载软件只去官方应用商店', '为了省事，把支付密码设为123456'],
+        answer: '在手机上下载软件只去官方应用商店',
+        correctHint: '答对了！官方应用商店的软件经过了安全检测。公共电脑使用后要清除上网记录，不要保存密码。',
+        wrongHint: '不对哦，官方应用商店的软件经过了安全检测。公共电脑使用后要清除上网记录，不要保存密码。'
+    },
+    {
+        type: 'multiple',
+        question: '你作为初中生，想利用暑假赚点零花钱，以下哪种途径最安全？',
+        options: ['在网上找“手工活外发”兼职，先交材料费', '在家长陪同下，去正规的书店或超市咨询小时工', '帮陌生人进行“电话推广”，每小时赚100元'],
+        answer: '在家长陪同下，去正规的书店或超市咨询小时工',
+        correctHint: '答对了！学生兼职一定要有监护人陪同。有些“电话推广”其实是帮助骗子拨打诈骗电话，属于“帮信罪”。',
+        wrongHint: '不对哦，学生兼职一定要有监护人陪同。有些“电话推广”其实是帮助骗子拨打诈骗电话，属于“帮信罪”。'
+    },
+    {
+        type: 'boolean',
+        question: '只要我不主动转账，扫一下陌生人发来的二维码也不会有什么风险。',
+        options: ['对', '错'],
+        answer: '错',
+        correctHint: '答对了！二维码可能隐藏病毒链接或钓鱼网站，扫了之后可能导致账号被盗或资金被划走。',
+        wrongHint: '不对哦，二维码可能隐藏病毒链接或钓鱼网站，扫了之后可能导致账号被盗或资金被划走。'
+    },
+    {
+        type: 'boolean',
+        question: '在社交平台上，那些自称“网警”或“反诈中心”的人，说能帮我把被骗的钱追回来，但要收取“手续费”，我可以相信他。',
+        options: ['对', '错'],
+        answer: '错',
+        correctHint: '答对了！这是“二次诈骗”。追回被骗资金只能通过拨打110报警，网上自称能追回钱的都是骗子。',
+        wrongHint: '不对哦，这是“二次诈骗”。追回被骗资金只能通过拨打110报警，网上自称能追回钱的都是骗子。'
+    },
+    {
+        type: 'boolean',
+        question: '如果我发现被骗了，为了不让爸妈担心，应该自己先想办法解决，比如去网上找“黑客”追回钱。',
+        options: ['对', '错'],
+        answer: '错',
+        correctHint: '答对了！同32题，网上所谓的“黑客”“追回专家”都是骗子，不要病急乱投医。',
+        wrongHint: '不对哦，同32题，网上所谓的“黑客”“追回专家”都是骗子，不要病急乱投医。'
+    },
+    {
+        type: 'boolean',
+        question: '接到陌生电话，对方能准确说出我的名字和学校，所以他就一定不是骗子。',
+        options: ['对', '错'],
+        answer: '错',
+        correctHint: '答对了！个人信息可能通过快递单、填写不明问卷等方式泄露，能说出个人信息不代表对方是好人。',
+        wrongHint: '不对哦，个人信息可能通过快递单、填写不明问卷等方式泄露，能说出个人信息不代表对方是好人。'
+    },
+    {
+        type: 'boolean',
+        question: '因为我是未成年人，在游戏里充值的钱，按照法律规定，家长可以申请退款，所以我可以随便充值，反正能退。',
+        options: ['对', '错'],
+        answer: '错',
+        correctHint: '答对了！虽然法律有相关规定，但退款流程复杂且需证据，且容易遭遇“退款”类诈骗。更重要的是，要养成理性消费的习惯。',
+        wrongHint: '不对哦，虽然法律有相关规定，但退款流程复杂且需证据，且容易遭遇“退款”类诈骗。更重要的是，要养成理性消费的习惯。'
+    },
+    {
+        type: 'boolean',
+        question: '手机或电脑定期查杀病毒，不随意连接公共免费WiFi进行支付操作，可以降低网络支付风险。',
+        options: ['对', '错'],
+        answer: '对',
+        correctHint: '答对了！良好的上网习惯是防范网络风险的基础。公共WiFi容易被黑客监听，不要在上面输入密码。',
+        wrongHint: '不对哦，良好的上网习惯是防范网络风险的基础。公共WiFi容易被黑客监听，不要在上面输入密码。'
+    },
+    {
+        type: 'boolean',
+        question: '只要我没有银行卡，不参与网络赌博，我就不会触犯“帮信罪”（帮助信息网络犯罪活动罪）。',
+        options: ['对', '错'],
+        answer: '错',
+        correctHint: '答对了！中学生如果出租、出借自己的微信号、QQ号、手机卡给诈骗分子，同样可能构成“帮信罪”，这是违法犯罪行为。',
+        wrongHint: '不对哦，中学生如果出租、出借自己的微信号、QQ号、手机卡给诈骗分子，同样可能构成“帮信罪”，这是违法犯罪行为。'
+    },
+    {
+        type: 'boolean',
+        question: '如果在网上被人威胁、恐吓，因为害怕被家长骂而选择隐瞒，这是正确的做法。',
+        options: ['对', '错'],
+        answer: '错',
+        correctHint: '答对了！遇到威胁恐吓，第一时间告诉家长或老师，他们是你最坚强的后盾。越隐瞒，骗子越得寸进尺。',
+        wrongHint: '不对哦，遇到威胁恐吓，第一时间告诉家长或老师，他们是你最坚强的后盾。越隐瞒，骗子越得寸进尺。'
+    },
+    {
+        type: 'boolean',
+        question: '“免费送皮肤”的广告，只要是在游戏公屏上发的，就是官方活动，可以相信。',
+        options: ['对', '错'],
+        answer: '错',
+        correctHint: '答对了！游戏公屏上的广告绝大多数是骗子发布的。官方活动会在游戏内公告栏中显示。',
+        wrongHint: '不对哦，游戏公屏上的广告绝大多数是骗子发布的。官方活动会在游戏内公告栏中显示。'
+    },
+    {
+        type: 'boolean',
+        question: '把手机借给同学打电话，没什么需要注意的。',
+        options: ['对', '错'],
+        answer: '错',
+        correctHint: '答对了！要警惕同学（或所谓的朋友）借用手机后，删除你的APP、更改支付密码，或利用你的手机号注册诈骗账号。',
+        wrongHint: '不对哦，要警惕同学（或所谓的朋友）借用手机后，删除你的APP、更改支付密码，或利用你的手机号注册诈骗账号。'
+    },
+    {
+        type: 'boolean',
+        question: '在网上聊天时，不透露自己和家人的真实姓名、住址、学校、电话号码，是保护隐私的好习惯。',
+        options: ['对', '错'],
+        answer: '对',
+        correctHint: '答对了！',
+        wrongHint: '不对哦，'
+    },
+    {
+        type: 'boolean',
+        question: '凡是要求“共享屏幕”的“客服”或“公检法”，都是骗子。共享屏幕等于让对方看到你的银行卡号和密码。',
+        options: ['对', '错'],
+        answer: '对',
+        correctHint: '答对了！',
+        wrongHint: '不对哦，'
+    },
+    {
+        type: 'boolean',
+        question: '如果你的同学因为被骗而情绪低落，你应该嘲笑他“太笨了”。',
+        options: ['对', '错'],
+        answer: '错',
+        correctHint: '答对了！被骗不是受害者的错，是骗子的错。应该安慰同学，并陪他一起告诉老师或家长。',
+        wrongHint: '不对哦，被骗不是受害者的错，是骗子的错。应该安慰同学，并陪他一起告诉老师或家长。'
+    },
+    {
+        type: 'boolean',
+        question: '96110是反诈预警劝阻电话，看到这个号码来电，可以拒接，因为不可能是真的。',
+        options: ['对', '错'],
+        answer: '错',
+        correctHint: '答对了！一定要接听！这说明你或者你的家人正在遭遇诈骗。',
+        wrongHint: '不对哦，一定要接听！这说明你或者你的家人正在遭遇诈骗。'
+    },
+    {
+        type: 'boolean',
+        question: '在朋友圈看到“转发这条消息到三个群，就能领10元话费”，这是真的福利，可以转发。',
+        options: ['对', '错'],
+        answer: '错',
+        correctHint: '答对了！这是“引流”骗局，目的是获取你的个人信息或让你传播虚假广告。',
+        wrongHint: '不对哦，这是“引流”骗局，目的是获取你的个人信息或让你传播虚假广告。'
+    },
+    {
+        type: 'boolean',
+        question: '“杀猪盘”是一种网络交友诱导投资赌博的诈骗方式，主要针对成年人，跟中小学生关系不大，所以不用了解。',
+        options: ['对', '错'],
+        answer: '错',
+        correctHint: '答对了！中小学生虽然没钱投资，但可能成为“杀猪盘”中的“猪仔”（被诱导），或者因为家长身陷“杀猪盘”而影响家庭。',
+        wrongHint: '不对哦，中小学生虽然没钱投资，但可能成为“杀猪盘”中的“猪仔”（被诱导），或者因为家长身陷“杀猪盘”而影响家庭。'
+    },
+    {
+        type: 'boolean',
+        question: '如果骗子声称“你是未成年人，导致我们公司账户被冻结，你要拿你爸妈的手机来解冻，不然抓你爸妈坐牢”，这时候因为害怕爸妈坐牢，应该照做。',
+        options: ['对', '错'],
+        answer: '错',
+        correctHint: '答对了！这是骗子惯用的恐吓话术。公检法不会因为未成年人玩游戏就抓人。遇到这种情况，立刻告诉家长，千万不要独自操作手机。',
+        wrongHint: '不对哦，这是骗子惯用的恐吓话术。公检法不会因为未成年人玩游戏就抓人。遇到这种情况，立刻告诉家长，千万不要独自操作手机。'
+    },
+    {
+        type: 'boolean',
+        question: '哪怕只是帮朋友“借”一下微信号，只要收了钱，如果这个微信号被拿去诈骗，我也没事。',
+        options: ['对', '错'],
+        answer: '错',
+        correctHint: '答对了！根据《反电信网络诈骗法》，非法出租、出借微信号、银行卡、电话卡，如果被用于诈骗，本人可能涉嫌“帮信罪”，会留下案底，并面临惩戒措施。',
+        wrongHint: '不对哦，根据《反电信网络诈骗法》，非法出租、出借微信号、银行卡、电话卡，如果被用于诈骗，本人可能涉嫌“帮信罪”，会留下案底，并面临惩戒措施。'
+    },
+    {
+        type: 'boolean',
+        question: '家长应该多跟孩子交流网络诈骗案例，并设置免密支付的限额，避免大额资金被转走。',
+        options: ['对', '错'],
+        answer: '对',
+        correctHint: '答对了！',
+        wrongHint: '不对哦，'
+    },
+    {
+        type: 'boolean',
+        question: '我已经安装了国家反诈中心APP，就可以随便点击陌生链接了。',
+        options: ['对', '错'],
+        answer: '错',
+        correctHint: '答对了！国家反诈中心APP能拦截大部分诈骗电话和短信，但不能100%保证绝对安全，自己提高警惕才是最重要的。',
+        wrongHint: '不对哦，国家反诈中心APP能拦截大部分诈骗电话和短信，但不能100%保证绝对安全，自己提高警惕才是最重要的。'
+    }
+ 
+
+
+            
+        ];
+
+        // 全局变量
+        let currentQuestions = [];
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let userAnswers = [];
+
+        // DOM 元素
+        const startScreen = document.getElementById('start-screen');
+        const quizScreen = document.getElementById('quiz-screen');
+        const resultScreen = document.getElementById('result-screen');
+        const customizeScreen = document.getElementById('customize-screen');
+
+        const startBtn = document.getElementById('start-btn');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const retryBtn = document.getElementById('retry-btn');
+        const backToStartBtn = document.getElementById('back-to-start-btn');
+
+        const questionText = document.getElementById('question-text');
+        const optionsContainer = document.getElementById('options-container');
+        const feedbackContainer = document.getElementById('feedback-container');
+        const feedbackIcon = document.getElementById('feedback-icon');
+        const feedbackText = document.getElementById('feedback-text');
+        const progressBar = document.getElementById('progress-bar');
+        const progressText = document.getElementById('progress-text');
+
+        const scoreText = document.getElementById('score-text');
+        const correctCount = document.getElementById('correct-count');
+        const wrongCount = document.getElementById('wrong-count');
+        const resultAnimation = document.getElementById('result-animation');
+
+
+
+        // 事件监听器
+        startBtn.addEventListener('click', startQuiz);
+        prevBtn.addEventListener('click', showPreviousQuestion);
+        nextBtn.addEventListener('click', showNextQuestion);
+        retryBtn.addEventListener('click', startQuiz);
+        backToStartBtn.addEventListener('click', showStartScreen);
+
+        // 函数：开始答题
+        function startQuiz() {
+            // 随机抽取10道题
+            currentQuestions = getRandomQuestions(defaultQuestions, 10);
+            currentQuestionIndex = 0;
+            score = 0;
+            userAnswers = new Array(currentQuestions.length).fill(null);
+            
+            // 更新界面
+            updateProgress();
+            showQuestion(currentQuestionIndex);
+            
+            // 显示答题界面
+            startScreen.classList.add('hidden');
+            quizScreen.classList.remove('hidden');
+            resultScreen.classList.add('hidden');
+        }
+
+        // 函数：从题库中随机抽取指定数量的题目
+        function getRandomQuestions(questions, count) {
+            const shuffled = [...questions].sort(() => 0.5 - Math.random());
+            return shuffled.slice(0, count);
+        }
+
+        // 函数：显示当前题目
+        function showQuestion(index) {
+            const question = currentQuestions[index];
+            questionText.textContent = question.question;
+            
+            // 清空选项容器
+            optionsContainer.innerHTML = '';
+            
+            // 添加选项
+            question.options.forEach((option, i) => {
+                const optionElement = document.createElement('div');
+                optionElement.className = 'option p-3 rounded-xl cursor-pointer transition-all duration-200 option-hover';
+                optionElement.style.border = '1px solid #e5e7eb';
+                optionElement.style.padding = '16px';
+                optionElement.style.marginBottom = '12px';
+                
+                // 如果用户已经回答过这个问题，显示选择状态
+                if (userAnswers[index] === option) {
+                    const isCorrect = option === question.answer;
+                    optionElement.style.backgroundColor = isCorrect ? '#06D6A0' : '#EF476F';
+                    optionElement.style.color = 'white';
+                    optionElement.style.borderColor = isCorrect ? '#06D6A0' : '#EF476F';
+                    optionElement.classList.remove('option-hover');
+                }
+                
+                optionElement.textContent = option;
+                optionElement.addEventListener('click', () => selectOption(option));
+                optionsContainer.appendChild(optionElement);
+            });
+            
+            // 更新反馈区域
+            if (userAnswers[index] !== null) {
+                const isCorrect = userAnswers[index] === question.answer;
+                showFeedback(isCorrect);
+            } else {
+                feedbackContainer.classList.add('hidden');
+            }
+            
+            // 更新按钮状态
+            prevBtn.disabled = index === 0;
+            nextBtn.textContent = index === currentQuestions.length - 1 ? '完成' : '下一题';
+        }
+
+        // 函数：选择选项
+        function selectOption(option) {
+            const question = currentQuestions[currentQuestionIndex];
+            const isCorrect = option === question.answer;
+            
+            // 记录用户答案
+            userAnswers[currentQuestionIndex] = option;
+            
+            // 更新分数
+            if (isCorrect && userAnswers[currentQuestionIndex] === option) {
+                score++;
+            }
+            
+            // 更新选项样式
+            const options = optionsContainer.querySelectorAll('.option');
+            options.forEach(opt => {
+                const optText = opt.textContent;
+                if (optText === option) {
+                    opt.style.backgroundColor = isCorrect ? '#06D6A0' : '#EF476F';
+                    opt.style.color = 'white';
+                } else if (optText === question.answer) {
+                    opt.style.backgroundColor = '#06D6A0';
+                    opt.style.color = 'white';
+                }
+                opt.classList.remove('option-hover');
+                opt.style.pointerEvents = 'none';
+            });
+            
+            // 显示反馈
+            showFeedback(isCorrect);
+            
+            // 播放音效
+            playSound(isCorrect);
+        }
+
+        // 函数：显示反馈
+        function showFeedback(isCorrect) {
+            const question = currentQuestions[currentQuestionIndex];
+            feedbackContainer.classList.remove('hidden');
+            
+            if (isCorrect) {
+                feedbackContainer.className = 'mb-6 p-4 rounded-xl';
+                feedbackContainer.style.backgroundColor = 'rgba(6, 214, 160, 0.1)';
+                feedbackIcon.className = 'w-10 h-10 rounded-full flex items-center justify-center text-white';
+                feedbackIcon.style.backgroundColor = '#06D6A0';
+                feedbackIcon.innerHTML = '<i class="fas fa-check"></i>';
+                feedbackText.textContent = question.correctHint || '答对啦！真棒！';
+                feedbackText.className = 'font-medium';
+                feedbackText.style.color = '#06D6A0';
+                
+                // 显示正确动画
+                showCorrectAnimation();
+            } else {
+                feedbackContainer.className = 'mb-6 p-4 rounded-xl';
+                feedbackContainer.style.backgroundColor = 'rgba(239, 71, 111, 0.1)';
+                feedbackIcon.className = 'w-10 h-10 rounded-full flex items-center justify-center text-white';
+                feedbackIcon.style.backgroundColor = '#EF476F';
+                feedbackIcon.innerHTML = '<i class="fas fa-times"></i>';
+                feedbackText.textContent = question.wrongHint || '再想想哦~';
+                feedbackText.className = 'font-medium';
+                feedbackText.style.color = '#EF476F';
+            }
+        }
+
+        // 函数：显示正确动画
+        function showCorrectAnimation() {
+            // 创建熊猫动画
+            //const pandaImg = document.createElement('img');
+            //pandaImg.src = 'https://free.picui.cn/free/2026/04/10/69d8c6e7da95e.jpg';
+            //pandaImg.className = 'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 object-contain animate-bounce-slow z-20';
+            //pandaImg.style.opacity = '0';
+            //document.body.appendChild(pandaImg);
+            
+            // 淡入淡出动画
+            //setTimeout(() => { pandaImg.style.opacity = '1'; pandaImg.style.transition = 'opacity 0.5s ease'; }, 100);
+            //setTimeout(() => { pandaImg.style.opacity = '0'; }, 1500);
+            //setTimeout(() => { document.body.removeChild(pandaImg); }, 2000);
+            
+            // 创建庆祝特效
+            createConfetti();
+        }
+
+        // 函数：创建庆祝特效
+        function createConfetti() {
+            const colors = ['#FF6B98', '#5BCEFA', '#FFD166', '#06D6A0', '#EF476F'];
+            const confettiCount = 50;
+            
+            for (let i = 0; i < confettiCount; i++) {
+                const confetti = document.createElement('div');
+                confetti.style.position = 'fixed';
+                confetti.style.width = '10px';
+                confetti.style.height = '10px';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.borderRadius = '50%';
+                confetti.style.left = `${Math.random() * 100}vw`;
+                confetti.style.top = '-20px';
+                confetti.style.zIndex = '9999';
+                confetti.style.pointerEvents = 'none';
+                
+                // 使用JS动画代替CSS动画
+                const duration = (Math.random() * 3 + 2) * 1000;
+                const delay = Math.random() * 2000;
+                
+                setTimeout(() => {
+                    let startTime = null;
+                    const animate = (timestamp) => {
+                        if (!startTime) startTime = timestamp;
+                        const progress = (timestamp - startTime) / duration;
+                        
+                        if (progress < 1) {
+                            confetti.style.transform = `translateY(${window.innerHeight * 2 * progress}px) rotate(${360 * progress}deg)`;
+                            confetti.style.opacity = 1 - progress;
+                            requestAnimationFrame(animate);
+                        } else {
+                            if (confetti.parentNode) {
+                                confetti.parentNode.removeChild(confetti);
+                            }
+                        }
+                    };
+                    requestAnimationFrame(animate);
+                }, delay);
+                
+                document.body.appendChild(confetti);
+            }
+        }
+
+        // 函数：播放音效
+        function playSound(isCorrect) {
+            // 使用Web Audio API生成音效（无需外部文件，所有平台兼容）
+            try {
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                
+                if (isCorrect) {
+                    // 答对音效：欢快的上升音
+                    playCorrectSound(audioContext);
+                } else {
+                    // 答错音效：低沉的提示音
+                    playWrongSound(audioContext);
+                }
+            } catch (e) {
+                console.log('音效播放失败:', e);
+            }
+        }
+        
+        // 答对音效
+        function playCorrectSound(audioContext) {
+            const notes = [523.25, 659.25, 783.99]; // C5, E5, G5 和弦
+            
+            notes.forEach((freq, index) => {
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+                
+                oscillator.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+                
+                oscillator.frequency.value = freq;
+                oscillator.type = 'sine';
+                
+                gainNode.gain.setValueAtTime(0.3, audioContext.currentTime + index * 0.1);
+                gainNode.gain.exponentialDecayToValueAtTime?.(0.01, audioContext.currentTime + index * 0.1 + 0.3) 
+                    || gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + index * 0.1 + 0.3);
+                
+                oscillator.start(audioContext.currentTime + index * 0.1);
+                oscillator.stop(audioContext.currentTime + index * 0.1 + 0.3);
+            });
+        }
+        
+        // 答错音效
+        function playWrongSound(audioContext) {
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            
+            oscillator.frequency.value = 200;
+            oscillator.type = 'sine';
+            
+            gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+            
+            oscillator.start(audioContext.currentTime);
+            oscillator.stop(audioContext.currentTime + 0.3);
+        }
+
+        // 函数：显示上一题
+        function showPreviousQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                updateProgress();
+                showQuestion(currentQuestionIndex);
+            }
+        }
+
+        // 函数：显示下一题或完成答题
+        function showNextQuestion() {
+            if (currentQuestionIndex < currentQuestions.length - 1) {
+                currentQuestionIndex++;
+                updateProgress();
+                showQuestion(currentQuestionIndex);
+            } else {
+                showResult();
+            }
+        }
+
+        // 函数：更新进度
+        function updateProgress() {
+            const progress = ((currentQuestionIndex + 1) / currentQuestions.length) * 100;
+            progressBar.style.width = `${progress}%`;
+            progressText.textContent = `${currentQuestionIndex + 1}/${currentQuestions.length}`;
+        }
+
+        // 函数：显示结果
+        function showResult() {
+            // 计算正确和错误的题目数量
+            const correct = userAnswers.filter((answer, index) => answer === currentQuestions[index].answer).length;
+            const wrong = userAnswers.filter((answer, index) => answer !== currentQuestions[index].answer).length;
+            
+            // 更新结果界面
+            scoreText.textContent = `${correct}/${currentQuestions.length}`;
+            correctCount.textContent = correct;
+            wrongCount.textContent = wrong;
+            
+            // 显示结果动画
+            showResultAnimation(correct);
+            
+            // 显示结果界面
+            startScreen.classList.add('hidden');
+            quizScreen.classList.add('hidden');
+            resultScreen.classList.remove('hidden');
+        }
+
+        // 函数：显示结果动画
+        function showResultAnimation(correctCount) {
+            resultAnimation.innerHTML = '';
+            
+            if (correctCount === currentQuestions.length) {
+                // 全部正确
+                const pandaImg = document.createElement('img');
+                pandaImg.src = 'https://free.picui.cn/free/2026/04/10/69d8c6e7da95e.jpg';
+                pandaImg.className = 'w-32 h-32 object-contain animate-bounce-slow';
+                resultAnimation.appendChild(pandaImg);
+            } else if (correctCount >= currentQuestions.length / 2) {
+                // 大部分正确
+                const pandaImg = document.createElement('img');
+                pandaImg.src = 'https://free.picui.cn/free/2026/04/10/69d8c6e7da95e.jpg';
+                pandaImg.className = 'w-32 h-32 object-contain';
+                resultAnimation.appendChild(pandaImg);
+            } else {
+                // 大部分错误
+                const foxImg = document.createElement('img');
+                foxImg.src = 'https://free.picui.cn/free/2026/04/13/69dc3a874196e.jpg';
+                foxImg.className = 'w-32 h-32 object-contain';
+                resultAnimation.appendChild(foxImg);
+            }
+        }
+
+
+
+        // 函数：显示开始界面
+        function showStartScreen() {
+            startScreen.classList.remove('hidden');
+            quizScreen.classList.add('hidden');
+            resultScreen.classList.add('hidden');
+            customizeScreen.classList.add('hidden');
+        }
+
+
+    </script>
+<script defer="" src="./小学生趣味答题-原始_files/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;0dfbdff466be4c40b5f907f3411b2142&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+</body></html>
