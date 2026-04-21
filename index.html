@@ -113,7 +113,7 @@
 <body class="bg-background min-h-screen font-sans" cz-shortcut-listen="true">
     <!-- 背景图 -->
     <div class="fixed inset-0 z-0 opacity-10">
-        <img src="https://free.picui.cn/free/2026/04/13/69dc3e7257411.jpg" alt="背景" class="w-full h-full object-cover">
+        <img src="https://game1-bg.oss-cn-beijing.aliyuncs.com/b0162505df0f4bc0a32de39874c2f024%7Etplv-a9rns2rl98-image.jpg" alt="背景" class="w-full h-full object-cover">
     </div>
 
     <div class="relative z-10 container mx-auto px-4 py-8 max-w-4xl">
@@ -133,7 +133,7 @@
             <!-- 开始界面 -->
             <div id="start-screen" class="bg-white rounded-3xl p-8 card-shadow text-center">
                 <div class="flex justify-center mb-6">
-                    <img src="https://free.picui.cn/free/2026/04/13/69dc3e7257411.jpg" alt="学习" class="w-48 h-48 object-cover rounded-2xl animate-float">
+                    <img src="https://game1-start.oss-cn-beijing.aliyuncs.com/%E5%9B%BE%E7%89%871.png" alt="学习" class="w-48 h-48 object-cover rounded-2xl animate-float">
                 </div>
                 <h2 class="text-2xl font-bold text-gray-800 mb-4">准备好开始挑战了吗？</h2>
                 <p class="text-gray-600 mb-6">每次将从题库中随机抽取10道题目，包括选择题和判断题</p>
@@ -1209,7 +1209,7 @@
         function showCorrectAnimation() {
             // 创建熊猫动画
             //const pandaImg = document.createElement('img');
-            //pandaImg.src = 'https://free.picui.cn/free/2026/04/10/69d8c6e7da95e.jpg';
+            //pandaImg.src = 'https://game2-right.oss-cn-beijing.aliyuncs.com/%E8%AD%A6%E5%AF%9F%E7%82%B9%E8%B5%9E2.jpg';
             //pandaImg.className = 'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 object-contain animate-bounce-slow z-20';
             //pandaImg.style.opacity = '0';
             //document.body.appendChild(pandaImg);
@@ -1380,19 +1380,19 @@
             if (correctCount === currentQuestions.length) {
                 // 全部正确
                 const pandaImg = document.createElement('img');
-                pandaImg.src = 'https://free.picui.cn/free/2026/04/10/69d8c6e7da95e.jpg';
+                pandaImg.src = 'https://game2-right.oss-cn-beijing.aliyuncs.com/%E8%AD%A6%E5%AF%9F%E7%82%B9%E8%B5%9E2.jpg';
                 pandaImg.className = 'w-32 h-32 object-contain animate-bounce-slow';
                 resultAnimation.appendChild(pandaImg);
             } else if (correctCount >= currentQuestions.length / 2) {
                 // 大部分正确
                 const pandaImg = document.createElement('img');
-                pandaImg.src = 'https://free.picui.cn/free/2026/04/10/69d8c6e7da95e.jpg';
+                pandaImg.src = 'https://game2-right.oss-cn-beijing.aliyuncs.com/%E8%AD%A6%E5%AF%9F%E7%82%B9%E8%B5%9E2.jpg';
                 pandaImg.className = 'w-32 h-32 object-contain';
                 resultAnimation.appendChild(pandaImg);
             } else {
                 // 大部分错误
                 const foxImg = document.createElement('img');
-                foxImg.src = 'https://free.picui.cn/free/2026/04/13/69dc3a874196e.jpg';
+                foxImg.src = 'https://game1-wrong.oss-cn-beijing.aliyuncs.com/%E8%AD%A6%E5%AF%9F%E5%8A%A0%E6%B2%B9.jpg';
                 foxImg.className = 'w-32 h-32 object-contain';
                 resultAnimation.appendChild(foxImg);
             }
